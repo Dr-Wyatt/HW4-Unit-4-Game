@@ -4,9 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
     <title>Crystals Collector!</title>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1>Crystal Collector!</h1>
+            </div>
+        </div>
+        <div class="row">   
+            <div class="col-sm-5">
+                <h1>Instructions</h1>
+            </div>
+            <div class="class col-sm-5">
+                <div class="row">   
+                    <div class="col-sm-5">
+                        <div id="Random-Number">
+                            Test Random Number
+                        </div>
+                    </div>
+                    <div class="col-sm-5">
+                        <div id="wins">
+                            Test Wins
+                        </div>
+                        <div id="losses">
+                            Test Losses
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                        <div class="col-sm-3">
+                            <img class ="gems" id="Amethyst" src="assets/images/Amethyst.png" alt="Amethyst Gem">
+                        </div>
+                        <div class="col-sm-3">
+                            <img class ="gems" id="Emerald" src="assets/images/Emerald.png" alt="Emerald Gem">
+                        </div>
+                        <div class="col-sm-3">
+                            <img class ="gems" id="Ruby" src="assets/images/Ruby.png" alt="Ruby Gem">
+                        </div>
+                        <div class="col-sm-3">
+                            <img class ="gems" id="Sapphire" src="assets/images/Sapphire.png" alt="Sapphire">
+                        </div>
+                </div>
+                <div class="row col-sm-6" id="result">
+                        Test Your Score:
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function randomNumFunc(){
+            var randomNum = Math.floor((Math.random()*120) + 19);
+            console.log("randomNum", randomNum);
+            $("#Random-Number").text(randomNum);
+        }
+        var testNum = randomNumFunc();
+        var wins = 0;
+        var losses = 0;
+        var AmethystNum = Math.floor((Math.random()*12) + 1);
+        console.log("AmethystNum", AmethystNum);
+        var EmeraldNum = Math.floor((Math.random()*12) + 1);
+        console.log("EmeraldNum", EmeraldNum);
+        var RubyNum = Math.floor((Math.random()*12) + 1);
+        console.log("RubyNum", RubyNum);
+        var SapphireNum = Math.floor((Math.random()*12) + 1);
+        console.log("SapphireNum", SapphireNum);
+        var result = 0;
+        console.log("result", result);
+        
+
+
+        if (result === testNum){
+            wins++;
+            $("#wins").text(wins);
+            randomNumFunc();
+        }
+        else if (result > testNum){
+            losses--;
+            $("#losses").text(losses);
+            randomNumFunc();
+        }
+        else { 
+            $("#Amethyst").on("click", function() {
+                result = parseInt(result) + parseInt(AmethystNum);
+                $("#result").text("Your Score: " + result);
+            });
+
+            $("#Emerald").on("click", function() {
+                result = parseInt(result) + parseInt(EmeraldNum);
+                $("#result").text("Your Score: " + result);
+            });
+
+            $("#Ruby").on("click", function() {
+                result = parseInt(result) + parseInt(RubyNum);
+                $("#result").text("Your Score: " + result);
+            });
+
+            $("#Sapphire").on("click", function() {
+                result = parseInt(result) + parseInt(SapphireNum);
+                $("#result").text("Your Score: " + result);
+            });
+        }
+    </script>
 </body>
 </html>
