@@ -21,8 +21,30 @@ function randomNumFunc(){
     $("#Random-Number").text(randomNum);
     return randomNum;
 }
-
 var matchNum = randomNumFunc();
+
+function checker(){
+    if (result === matchNum){
+        wins++;
+        $("#wins").text("Wins: " + wins);
+        result = 0;
+        $("#result").text("Your Score: " + result);
+        matchNum = randomNumFunc();
+        gemNumFunc();
+        console.log("newMatchNum", matchNum);
+
+    }
+    else if (result > matchNum){
+        losses++;
+        $("#losses").text("Losses: " + losses);
+        result = 0;
+        $("#result").text("Your Score: " + result);
+        matchNum = randomNumFunc();
+        gemNumFunc();
+        console.log("newMatchNum", matchNum);
+    }
+}
+
 console.log("matchNum", matchNum);
 
 console.log("result", result);
@@ -36,26 +58,7 @@ $("#Amethyst").on("click", function() {
     result = parseInt(result) + parseInt(gemNumArr[0]);
     $("#result").text("Your Score: " + result);
     console.log("Amethyst After", result);
-    
-    if (result === matchNum){
-        wins++;
-        $("#wins").text("Wins: " + wins);
-        result = 0;
-        $("#result").text("Your Score: " + result);
-        matchNum = randomNumFunc();
-        gemNumFunc();
-        console.log("newMatchNum", matchNum);
-
-    }
-    else if (result > matchNum){
-        losses++;
-        $("#losses").text("Losses: " + losses);
-        result = 0;
-        $("#result").text("Your Score: " + result);
-        matchNum = randomNumFunc();
-        gemNumFunc();
-        console.log("newMatchNum", matchNum);
-    }
+    checker();
 });
 
 
@@ -64,24 +67,7 @@ $("#Emerald").on("click", function() {
     result = parseInt(result) + parseInt(gemNumArr[1]);
     $("#result").text("Your Score: " + result);
     console.log("Emerald After", result);
-    if (result === matchNum){
-        wins++;
-        $("#wins").text("Wins: " + wins);
-        result = 0;
-        $("#result").text("Your Score: " + result);
-        matchNum = randomNumFunc();
-        gemNumFunc();
-        console.log("newMatchNum", matchNum);
-    }
-    else if (result > matchNum){
-        losses++;
-        $("#losses").text("Losses: " + losses);
-        result = 0;
-        $("#result").text("Your Score: " + result);
-        matchNum = randomNumFunc();
-        gemNumFunc();
-        console.log("newMatchNum", matchNum);
-    }
+    checker ();
 });
 
 $("#Ruby").on("click", function() {
@@ -89,24 +75,7 @@ $("#Ruby").on("click", function() {
     result = parseInt(result) + parseInt(gemNumArr[2]);
     $("#result").text("Your Score: " + result);
     console.log("Ruby After", result);
-    if (result === matchNum){
-        wins++;
-        $("#wins").text("Wins: " + wins);
-        result = 0;
-        $("#result").text("Your Score: " + result);
-        matchNum = randomNumFunc();
-        gemNumFunc();
-        console.log("newMatchNum", matchNum);
-    }
-    else if (result > matchNum){
-        losses++;
-        $("#losses").text("Losses: " + losses);
-        result = 0;
-        $("#result").text("Your Score: " + result);
-        matchNum = randomNumFunc();
-        gemNumFunc();
-        console.log("newMatchNum", matchNum);
-    }
+    checker ();
 });
 
 $("#Sapphire").on("click", function() {
@@ -114,23 +83,6 @@ $("#Sapphire").on("click", function() {
     result = parseInt(result) + parseInt(gemNumArr[3]);
     $("#result").text("Your Score: " + result);
     console.log("Sapphire After", result);
-    if (result === matchNum){
-        wins++;
-        $("#wins").text("Wins: " + wins);
-        result = 0;
-        $("#result").text("Your Score: " + result);
-        matchNum = randomNumFunc();
-        gemNumFunc();
-        console.log("newMatchNum", matchNum);
-    }
-    else if (result > matchNum){
-        losses++;
-        $("#losses").text("Losses: " + losses);
-        result = 0;
-        $("#result").text("Your Score: " + result);
-        matchNum = randomNumFunc();
-        gemNumFunc();
-        console.log("newMatchNum", matchNum);
-    }
+    checker ();
 });
 
