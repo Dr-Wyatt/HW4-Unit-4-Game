@@ -39,7 +39,7 @@ $("#Amethyst").on("click", function() {
     
     if (result === matchNum){
         wins++;
-        $("#wins").text(wins);
+        $("#wins").text("Wins: " + wins);
         result = 0;
         $("#result").text("Your Score: " + result);
         matchNum = randomNumFunc();
@@ -49,7 +49,7 @@ $("#Amethyst").on("click", function() {
     }
     else if (result > matchNum){
         losses++;
-        $("#losses").text(losses);
+        $("#losses").text("Losses: " + losses);
         result = 0;
         $("#result").text("Your Score: " + result);
         matchNum = randomNumFunc();
@@ -66,7 +66,7 @@ $("#Emerald").on("click", function() {
     console.log("Emerald After", result);
     if (result === matchNum){
         wins++;
-        $("#wins").text(wins);
+        $("#wins").text("Wins: " + wins);
         result = 0;
         $("#result").text("Your Score: " + result);
         matchNum = randomNumFunc();
@@ -75,7 +75,7 @@ $("#Emerald").on("click", function() {
     }
     else if (result > matchNum){
         losses++;
-        $("#losses").text(losses);
+        $("#losses").text("Losses: " + losses);
         result = 0;
         $("#result").text("Your Score: " + result);
         matchNum = randomNumFunc();
@@ -91,7 +91,7 @@ $("#Ruby").on("click", function() {
     console.log("Ruby After", result);
     if (result === matchNum){
         wins++;
-        $("#wins").text(wins);
+        $("#wins").text("Wins: " + wins);
         result = 0;
         $("#result").text("Your Score: " + result);
         matchNum = randomNumFunc();
@@ -100,7 +100,7 @@ $("#Ruby").on("click", function() {
     }
     else if (result > matchNum){
         losses++;
-        $("#losses").text(losses);
+        $("#losses").text("Losses: " + losses);
         result = 0;
         $("#result").text("Your Score: " + result);
         matchNum = randomNumFunc();
@@ -116,7 +116,7 @@ $("#Sapphire").on("click", function() {
     console.log("Sapphire After", result);
     if (result === matchNum){
         wins++;
-        $("#wins").text(wins);
+        $("#wins").text("Wins: " + wins);
         result = 0;
         $("#result").text("Your Score: " + result);
         matchNum = randomNumFunc();
@@ -125,7 +125,7 @@ $("#Sapphire").on("click", function() {
     }
     else if (result > matchNum){
         losses++;
-        $("#losses").text(losses);
+        $("#losses").text("Losses: " + losses);
         result = 0;
         $("#result").text("Your Score: " + result);
         matchNum = randomNumFunc();
