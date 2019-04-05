@@ -18,7 +18,7 @@ gemNumFunc();
 function randomNumFunc(){
     var randomNum = Math.floor((Math.random()*120) + 19);
     console.log("randomNum", randomNum);
-    $("#Random-Number").text(randomNum);
+    $("#Random-Number").html($('<h2/>').text(randomNum));
     return randomNum;
 }
 var matchNum = randomNumFunc();
@@ -26,9 +26,9 @@ var matchNum = randomNumFunc();
 function checker(){
     if (result === matchNum){
         wins++;
-        $("#wins").text("Wins: " + wins);
+        $("#wins").html($('<h2/>').text("Wins: " + wins));
         result = 0;
-        $("#result").text("Your Score: " + result);
+        $("#result").html($('<h2/>').text("Your Score: " + result)); 
         matchNum = randomNumFunc();
         gemNumFunc();
         console.log("newMatchNum", matchNum);
@@ -36,9 +36,9 @@ function checker(){
     }
     else if (result > matchNum){
         losses++;
-        $("#losses").text("Losses: " + losses);
+        $("#losses").html($('<h2/>').text("Losses: " + losses));
         result = 0;
-        $("#result").text("Your Score: " + result);
+        $("#result").html($('<h2/>').text("Your Score: " + result));
         matchNum = randomNumFunc();
         gemNumFunc();
         console.log("newMatchNum", matchNum);
@@ -56,7 +56,7 @@ console.log("Sapphire", gemNumArr[3]);
 $("#Amethyst").on("click", function() {
     console.log("Amethyst Before", result);
     result = parseInt(result) + parseInt(gemNumArr[0]);
-    $("#result").text("Your Score: " + result);
+    $("#result").html($('<h2/>').text("Your Score: " + result));
     console.log("Amethyst After", result);
     checker();
 });
@@ -65,7 +65,7 @@ $("#Amethyst").on("click", function() {
 $("#Emerald").on("click", function() {
     console.log("Emerald Before", result);
     result = parseInt(result) + parseInt(gemNumArr[1]);
-    $("#result").text("Your Score: " + result);
+    $("#result").html($('<h2/>').text("Your Score: " + result));
     console.log("Emerald After", result);
     checker ();
 });
@@ -73,7 +73,7 @@ $("#Emerald").on("click", function() {
 $("#Ruby").on("click", function() {
     console.log("Ruby Before", result);
     result = parseInt(result) + parseInt(gemNumArr[2]);
-    $("#result").text("Your Score: " + result);
+    $("#result").html($('<h2/>').text("Your Score: " + result));
     console.log("Ruby After", result);
     checker ();
 });
@@ -81,7 +81,7 @@ $("#Ruby").on("click", function() {
 $("#Sapphire").on("click", function() {
     console.log("Sapphire Before", result);
     result = parseInt(result) + parseInt(gemNumArr[3]);
-    $("#result").text("Your Score: " + result);
+    $("#result").html($('<h2/>').text("Your Score: " + result));
     console.log("Sapphire After", result);
     checker ();
 });

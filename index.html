@@ -12,48 +12,54 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-sm-12 text-center">
+        <div class="row justify-content-center mb-2">
+            <div class="col-sm-5 text-center mt-2" id="title-of-game">
                 <h1>Crystal Collector!</h1>
             </div>
         </div>
         <div class="row">   
-            <div class="col-sm-5">
-                <h1>Instructions</h1>
+            <div class="col-sm-5" id="instructions">
+                <h1 class= "text-center">Instructions</h1>
+                <div id="instruction-text">
+                You will be given a random number at the start of the game. <br><br>
+                There are four crystals. By clicking on a crystal, you will add a specific amount of points to your total score. <br><br>
+                You win the game by matching your total score to the random number. You lose the game if your total score goes about the random number. <br><br>
+                The value of each crystal is hidden from you until you click on it. <br><br>
+                Each time when the game starts, the game will change the value of each crystal. <br><br>
+                </div>
             </div>
-            <div class="class col-sm-5">
-                <div class="row">   
-                    <div class="col-sm-5">
-                        <div id="Random-Number">
-                            Match Number
-                        </div>
+            <div class="class col-sm-6 col-md-5 col-lg-5 mb-2">
+                <div class="row justify-content-center">   
+                    <div class="col-3 mb-2 text-center align-self-center">
+                        <div id="Random-Number"></div>
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm-4 col-md-5 col-lg-5 mb-2" id="wins-losses">
                         <div id="wins">
-                             Wins:
+                             <h2>Wins: </h2>
                         </div>
                         <div id="losses">
-                            Losses:
+                            <h2>Losses: </h2>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                        <div class="col-sm-3">
+                <div class="row justify-content-center">
+                        <div class="col-sm-5 col-md-5 col-lg-3 align-self-center">
                             <img class ="gems" id="Amethyst" src="assets/images/Amethyst.png" alt="Amethyst Gem">
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-5 col-md-5 col-lg-3">
                             <img class ="gems" id="Emerald" src="assets/images/Emerald.png" alt="Emerald Gem">
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-5 col-md-5 col-lg-3">
                             <img class ="gems" id="Ruby" src="assets/images/Ruby.png" alt="Ruby Gem">
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-5 col-md-5 col-lg-3">
                             <img class ="gems" id="Sapphire" src="assets/images/Sapphire.png" alt="Sapphire">
                         </div>
+                        <div class="col-sm-8" id="result">
+                            <h2>Your Score: </h2>
+                        </div>
                 </div>
-                <div class="row col-sm-6" id="result">
-                        Your Score:
-                </div>
+                
             </div>
         </div>
     </div>
